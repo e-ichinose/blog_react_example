@@ -1,11 +1,11 @@
 import React from 'react';
-import { Article } from '@/common/type';
+import { Article } from '../../../../common/type';
 
 interface ArticleListPresenterProps {
   articles?: Article[];
 }
 
-const ArticleListPresenter: React.FC<ArticleListPresenterProps> = ({ articles }) => {
+const ArticleListPresenter: React.FC<ArticleListPresenterProps> = () => {
   return (
     <>
       <div>記事一覧</div>

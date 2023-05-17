@@ -1,11 +1,19 @@
 import React from 'react';
-import Header from '../header/Header';
 import DocumentMeta from 'react-document-meta';
 
+import Header from '../header/Header';
+import styled from 'styled-components';
+
+const Body = styled.div`
+  max-width: 1000px;
+  margin: 0 auto;
+`;
+
 interface LayoutProps {
-  children?: JSX.Element;
+  children?: React.ReactNode;
   title?: string;
 }
+
 export const Layout: React.FC<LayoutProps> = ({
   children,
   title = 'ブログ記事サイト',
@@ -13,7 +21,7 @@ export const Layout: React.FC<LayoutProps> = ({
   return (
     <DocumentMeta title={title}>
       <Header />
-      {children}
+      <Body>{children}</Body>
     </DocumentMeta>
   );
 };

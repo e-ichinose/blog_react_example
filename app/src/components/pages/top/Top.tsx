@@ -1,6 +1,6 @@
 import React from 'react';
-import { Layout } from '@/components/ui';
-import { ArticleListContainer } from '@/components/features';
+import { Layout } from '../../../components/ui';
+import { ArticleListContainer } from '../../../components/features';
 
 export const Top: React.FC = () => {
   return (

@@ -9,7 +9,7 @@ import {
   Typography,
 } from '@mui/material';
 import Drawer from '@mui/material/Drawer';
-import { NavItems } from '@/common/constants';
+import { NavItems } from '../../../../common/constants';
 
 export interface NavigationProps {
   container?: () => HTMLElement;

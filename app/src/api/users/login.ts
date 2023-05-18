@@ -1,4 +1,4 @@
-import { axios } from '../../lib/http';
+import { axios } from '../../lib/axios';
 import { UserResponse } from '../../common/type';
 
 export interface LoginCredentialsDTO {

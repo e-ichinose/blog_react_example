@@ -3,4 +3,4 @@ export enum URLPath {
   LIST = '/list',
 }
 
-export const NavItems = ['記事登録', '記事更新', 'Contact'] as const;
+export const NavItems = ['記事一覧', '記事登録', 'ログアウト'] as const;

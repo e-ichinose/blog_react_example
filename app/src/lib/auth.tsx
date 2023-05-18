@@ -9,6 +9,7 @@ import {
 } from '../api';
 import { User, UserResponse } from '../common/type';
 import storage from '../common/utils/storage';
+import { CenteredCircularProgress } from '../components/ui';
 
 async function handleUserResponse(data: UserResponse) {
   const { id, username, token } = data;
@@ -47,7 +48,7 @@ const authConfig = {
   registerFn,
   logoutFn,
   LoaderComponent() {
-    return <div></div>;
+    return <CenteredCircularProgress />;
   },
 };
 

@@ -2,9 +2,10 @@ import { Suspense } from 'react';
 import { Outlet } from 'react-router-dom';
 
 import { lazyImport } from '../common/utils/lazyImport';
+import { URLPath } from '../common/constants';
 import { CenteredCircularProgress, Layout } from '../components/ui';
 
-const { Top } = lazyImport(() => import('../components/pages'), 'Top');
+const { TopPage } = lazyImport(() => import('../components/pages'), 'TopPage');
 
 const App = () => {
   return (
@@ -22,8 +23,8 @@ const App = () => {
 
 export const protectedRoutes = [
   {
-    path: '/',
+    path: URLPath.HOME,
     element: <App />,
-    children: [{ path: '/', element: <Top /> }],
+    children: [{ path: URLPath.HOME, element: <TopPage /> }],
   },
 ];

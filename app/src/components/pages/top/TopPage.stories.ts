@@ -1,8 +1,8 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import Top from './Top';
+import Top from './TopPage';
 
 const meta = {
-  title: 'Pages/Top',
+  title: 'Pages/TopPage',
   component: Top,
   tags: ['autodocs'],
   parameters: {

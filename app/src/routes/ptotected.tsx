@@ -5,6 +5,8 @@ import { lazyImport } from '../common/utils/lazyImport';
 import { URLPath } from '../common/constants';
 import { CenteredCircularProgress, Layout } from '../components/ui';
 
+import { UserRegisterPage } from '../components/pages/userRegister/UserRegisterPage'; 
+
 const { TopPage } = lazyImport(() => import('../components/pages'), 'TopPage');
 
 const App = () => {
@@ -27,4 +29,9 @@ export const protectedRoutes = [
     element: <App />,
     children: [{ path: URLPath.HOME, element: <TopPage /> }],
   },
+  {
+    path: URLPath.REGISTER,
+    element: <App />,
+    children: [{ path: URLPath.REGISTER, element: <UserRegisterPage /> }],
+  }
 ];

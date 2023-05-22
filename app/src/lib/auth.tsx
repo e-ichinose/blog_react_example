@@ -52,7 +52,7 @@ const authConfig = {
   },
 };
 
-export const { useAuth } = initReactQueryAuth<
+export const { AuthProvider, useAuth } = initReactQueryAuth<
   User | null,
   unknown,
   LoginCredentialsDTO,

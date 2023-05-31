@@ -10,5 +10,5 @@ export interface RegisterCredentialsDTO {
 export const registerWithEmailAndPassword = (
   data: RegisterCredentialsDTO
 ): Promise<UserResponse> => {
-  return axios.post('/auth/register', data);
+  return axios.post('/api/user/register', data);
 };

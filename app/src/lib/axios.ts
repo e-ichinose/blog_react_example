@@ -4,6 +4,7 @@ import { API_URL } from '../common/config';
 import storage from '../common/utils/storage';
 
 function authRequestInterceptor(config: AxiosRequestConfig) {
+  console.log(API_URL);
   const token = storage.getToken();
   if (token) {
     config.headers.authorization = `${token}`;

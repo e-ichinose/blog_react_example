@@ -25,6 +25,15 @@ export interface AuthUser {
   updated_at: string;
 }
 
-export interface UserResponse extends User {
-  token: string;
+export interface UserResponse extends Success {
+  data: {
+    id: string;
+    username: string;
+    token: string;
+  }
+}
+
+export interface Success {
+  message: string;
+  code: number;
 }

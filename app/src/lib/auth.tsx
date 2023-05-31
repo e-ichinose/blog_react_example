@@ -12,7 +12,7 @@ import storage from '../common/utils/storage';
 import { CenteredCircularProgress } from '../components/ui';
 
 async function handleUserResponse(data: UserResponse) {
-  const { id, username, token } = data;
+  const { id, username, token } = data.data;
   storage.setToken(token);
   return { id, username };
 }
@@ -52,7 +52,7 @@ const authConfig = {
   },
 };
 
-export const { useAuth } = initReactQueryAuth<
+export const { AuthProvider, useAuth } = initReactQueryAuth<
   User | null,
   unknown,
   LoginCredentialsDTO,

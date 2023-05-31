@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Article } from '../../../../common/type';
 import { useForm, SubmitHandler } from "react-hook-form";
 import "./styles.css";
@@ -38,11 +38,12 @@ const UserRegisterPresenter: React.FC<UserRegistertPresenterProps> = () => {
     navigate(URLPath.HOME);
   }; // your form submit function which will invoke after successful validation
 
-  // console.log(watch("username")); 
+
+  console.log(watch("username"));
   // you can watch individual input by pass the name of the input
 
   return (
-    <>
+<>
       <form onSubmit={handleSubmit(onSubmit)}>
 
         <label>ユーザー名</label>
@@ -60,7 +61,7 @@ const UserRegisterPresenter: React.FC<UserRegistertPresenterProps> = () => {
         {errors?.password?.type === "minLength" && (<p>8文字以上入力してください</p>)}
         {errors?.password?.type === "pattern" && (
           <p>少なくとも1つの英大文字が含まれれている必要があります</p>
-        )}
+          )}
 
         <label>パスワード（確認）</label>
         <input {...register("confirmPassword", { required: true })} />
@@ -68,8 +69,8 @@ const UserRegisterPresenter: React.FC<UserRegistertPresenterProps> = () => {
 
         <input type="submit" />
       </form>
+          </>
 
-    </>
   );
 };
 
